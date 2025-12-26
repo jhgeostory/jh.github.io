@@ -1,0 +1,95 @@
+:root {
+    --primary: #4CAF50;
+    --primary-hover: #45a049;
+    --secondary: #2196F3;
+    --secondary-hover: #1976D2;
+    --bg: #f4f7f6;
+    --text: #333;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: left;
+    border-left: 5px solid #ccc;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.med-icon {
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+.med-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.status-display {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.action-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: var(--primary);
+}
+
+.action-btn:disabled {
+    background-color: #ccc;
+    cursor: default;
+}
+
+/* Status Styles */
+.card.taken {
+    border-left-color: var(--primary);
+    background-color: #f0fff0;
+}
+
+.card.taken .status-display {
+    color: var(--primary);
+}
+
+#card-calcium .action-btn {
+    background-color: var(--secondary);
+}
+
+#card-calcium.taken {
+    border-left-color: var(--secondary);
+    background-color: #f0f8ff;
+}
+
+#card-calcium.taken .status-display {
+    color: var(--secondary);
+}
